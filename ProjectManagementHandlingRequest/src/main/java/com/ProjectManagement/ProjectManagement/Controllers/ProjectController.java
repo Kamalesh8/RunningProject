@@ -44,6 +44,10 @@ public class ProjectController {
 		System.err.println("Client IPAddress:"+clientAddress);
 		System.err.println("Client Language:"+clientLocation.getLanguage());
 		System.err.println("Client ServerName:"+request.getServerName()+" Server Port:"+request.getServerPort());
+		String clienttool = request.getHeader("user-agent");
+		System.err.println("Client Tool : "+clienttool);
+		String from = request.getHeader("from");
+		System.err.println("Username :"+from);
 		/*
 		 * ...write the code for blocking the code or for forwarding the client 
 		 * Ip filtering or ip forwarding
